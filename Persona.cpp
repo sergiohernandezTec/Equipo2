@@ -2,22 +2,41 @@
 // Created by savda on 01/12/2024.
 //
 
-#include "persona.h"
+
+#include "Profesor.h"
 #include <iostream>
+
 using namespace std;
 
-Persona::Persona(string nombre, string matricula) : nombre(nombre), matricula(matricula) {}
+Profesor::Profesor(const string& nombre, const string& matricula)
+    : Persona(nombre, matricula) {}
 
-string Persona::getNombre() const {
-    return nombre;
+void Profesor::asignarMateria(const string& nombreMateria) {
+    materias.push_back(nombreMateria);
 }
 
-string Persona::getMatricula() const {
-    return matricula;
+const vector<string>& Profesor::getMaterias() const {
+    return materias;
 }
 
-void Persona::mostrarInformacion() {
-    cout << "Nombre: " << nombre << ", Matrícula: " << matricula << endl;
+bool Profesor::imparteMateria(const string& nombreMateria) const {
+    for (const auto& materia : materias) {
+        if (materia == nombreMateria) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void Profesor::mostrarMaterias() const {
+    cout << "Materias que imparte " << nombre << ":\n";
+    for (const auto& materia : materias) {
+        cout << "  - " << materia << "\n";
+    }
+}
+
+void Profesor::mostrarInformacion() const {
+    mostrarMaterias();
 }
 
 

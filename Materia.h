@@ -1,3 +1,8 @@
+//
+// Created by savda on 02/12/2024.
+//
+
+
 #ifndef MATERIA_H
 #define MATERIA_H
 
@@ -5,21 +10,11 @@
 using namespace std;
 
 class Materia {
-private:
+public:
     string nombre;
     double calificacion;
 
-public:
-
-    Materia(string nombre, double calificacion);
-
-    string getNombre();
-    int getCalificacion();
-
-
-    void mostrarInfo();
-
+    Materia(const string& nombre, double calificacion = 0.0);
 };
 
 #endif
-

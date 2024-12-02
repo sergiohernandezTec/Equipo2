@@ -9,15 +9,19 @@
 using namespace std;
 
 class Persona {
-private:
+protected:
     string nombre;
     string matricula;
 
 public:
-    Persona(string nombre, string matricula);
+    Persona(const string& nombre, const string& matricula);
+
     string getNombre() const;
     string getMatricula() const;
-    void mostrarInformacion();
+
+    virtual void mostrarInformacion() const = 0; //CHAT GPT
+
+    virtual ~Persona() = default; //CHAT GPT
 };
 
-#endif // PERSONA_H
+#endif
