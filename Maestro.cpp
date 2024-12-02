@@ -3,45 +3,38 @@
 //
 
 #include "Maestro.h"
-#include "Maestro.h"
 #include <iostream>
 
+Maestro::Maestro(int matricula, std::string nombre, std::string direccion, int edad)
+    : Persona(nombre, direccion, edad), matricula(matricula) {}
 
-Maestro::Maestro(const std::string& nombre, int id) : nombre(nombre), id(id) {}
-
-
-void Maestro::asignarMateria(const Materia& materia) {
-    materiasAsignadas.push_back(materia);
-    std::cout << "Materia " << materia.getNombre() << " asignada a " << nombre << ".\n";
+int Maestro::getMatricula() const {
+    return matricula;
 }
 
+void Maestro::agregarMateria(const Materia& materia) {
+    materias.push_back(materia);
+}
 
-void Maestro::asignarCalificacion(const std::string& nombreMateria, int idAlumno, double calificacion) {
-    for (auto& materia : materiasAsignadas) {
-        if (materia.getNombre() == nombreMateria) {
-            materia.asignarCalificacion(idAlumno, calificacion);
-            std::cout << "Calificación asignada en " << nombreMateria << " al alumno ID: " << idAlumno << ".\n";
-            return;
+void Maestro::verListaAlumnos() const {
+    std::cout << "Lista de alumnos: \n";
+    for (const auto& materia : materias) {
+        materia.mostrarAlumnos();
+    }
+}
+
+void Maestro::asignarCalificacion(int matriculaAlumno, double calificacion) {
+    for (auto& materia : materias) {
+        if (materia.tieneAlumno(matriculaAlumno)) {
+            materia.asignarCalificacion(matriculaAlumno, calificacion);
+            std::cout << "Calificación asignada a alumno con matrícula " << matriculaAlumno << std::endl;
         }
     }
-    std::cout << "Materia no encontrada.\n";
 }
 
-void Maestro::verListaAlumnos() {
-    for (const auto& materia : materiasAsignadas) {
-        std::cout << "Materia: " << materia.getNombre() << "\n";
-        materia.verAlumnos();
+void Maestro::verCalificaciones() const {
+    for (const auto& materia : materias) {
+        std::cout << "Materia: " << materia.getNombre() << " - Calificación: "
+                  << materia.obtenerCalificacion() << std::endl;
     }
-}
-
-std::string Maestro::getNombre() const {
-    return nombre;
-}
-
-int Maestro::getId() const {
-    return id;
-}
-
-std::vector<Materia> Maestro::getMaterias() const {
-    return materiasAsignadas;
 }

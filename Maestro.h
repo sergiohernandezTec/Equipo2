@@ -4,27 +4,25 @@
 
 #ifndef MAESTRO_H
 #define MAESTRO_H
+#include "Persona.h"
+#include "Materia.h"
 #include <string>
 #include <vector>
-#include "Materia.h"
 
-class Maestro {
+
+class Maestro : public Persona {
 private:
-    std::string nombre;
-    int id;
-    std::vector<Materia> materiasAsignadas;
+    int matricula;
+    std::vector<Materia> materias;
 
 public:
-    Maestro(const std::string& nombre, int id);
-    void asignarMateria(const Materia& materia);
-    void asignarCalificacion(const std::string& nombreMateria, int idAlumno, double calificacion);
-    void verListaAlumnos();
+    Maestro(int matricula, std::string nombre, std::string direccion, int edad);
 
-    std::string getNombre() const;
-    int getId() const;
-    std::vector<Materia> getMaterias() const;
+    int getMatricula() const;
+    void agregarMateria(const Materia& materia);
+    void verListaAlumnos() const;
+    void asignarCalificacion(int matriculaAlumno, double calificacion);
+    void verCalificaciones() const;
 };
 
 #endif //MAESTRO_H
-
-
