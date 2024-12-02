@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Escuela.h"
+#include <algorithm>
 using namespace std;
 
 int main() {
