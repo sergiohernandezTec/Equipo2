@@ -22,7 +22,7 @@ int Materia::getCalificion() {
 
 void Materia::mostrarInfo() {
     cout << "Materia: " << nombre << endl;
-    cout << "Calificacion: " << creditos << endl;
+    cout << "Calificacion: " << calificacion << endl;
 }
 
 
