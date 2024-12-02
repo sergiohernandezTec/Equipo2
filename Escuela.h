@@ -17,7 +17,7 @@ private:
     string telefono;
     vector<Alumno> alumnos;
     vector<Profesor> profesores;
-    //vector<materia>materias;
+    vector<Materia>materias;
     double promGeneral;
 
 public:
