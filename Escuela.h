@@ -22,7 +22,7 @@ private:
 
 public:
     Escuela(string _nombre, string _telefono);
-    void guardarAlumnos(const vector<Alumnos>& alumnos);
+    void guardarAlumnos(const vector<Alumno>& alumnos);
     void cargarAlumnos(vector<Alumno>& alumnos);
     void guardarProfesores(const vector<Profesor>& profesores);
     void cargarProfesores(vector<Profesor>& profesores);
