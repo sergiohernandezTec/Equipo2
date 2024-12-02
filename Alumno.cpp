@@ -4,38 +4,53 @@
 
 #include "alumno.h"
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
-Alumno::Alumno(string nombre, string matricula) : Persona(nombre, matricula) {}
+Alumno::Alumno(const string& nombre, const string& matricula)
+    : Persona(nombre, matricula) {}
 
-void Alumno::agregarMateria(const Materia& materia) {
-    materias.push_back(materia);
+void Alumno::agregarMateria(const string& nombre) {
+    materias.emplace_back(nombre, 0.0);
 }
 
-void Alumno::asignarCalificacion(string nombreMateria, double calificacion) {
-    for (Materia& materia : materias) {
-        if (materia.getNombre() == nombreMateria) {
-            materia.setCalificacion(calificacion);
+void Alumno::asignarCalificacion(const string& nombreMateria, double calificacion) {
+    for (auto& materia : materias) {
+        if (materia.nombre == nombreMateria) {
+            materia.calificacion = calificacion;
             return;
         }
     }
-    cout << "Materia no encontrada: " << nombreMateria << endl;
+    cout << "Materia no encontrada.\n";
+}
+
+const vector<Materia>& Alumno::getMaterias() const {
+    return materias;
 }
 
 double Alumno::calcularPromedio() const {
-    if (materias.empty()) return 0;
-    double suma = 0;
-    for (const Materia& materia : materias) {
-        suma += materia.getCalificacion();
+    if (materias.empty()) return 0.0;
+
+    double suma = 0.0;
+    for (const auto& materia : materias) {
+        suma += materia.calificacion;
     }
     return suma / materias.size();
 }
 
-void Alumno::mostrarInformacion() const {
-    Persona::mostrarInformacion();
-    cout << "Materias y calificaciones:\n";
-    for (const Materia& materia : materias) {
-        materia.mostrarInformacion();
+//INICIA CHAT GPT
+void Alumno::consultarCalificaciones() const {
+    cout << "Calificaciones de " << nombre << ":\n";
+    for (const auto& materia : materias) {
+        cout << "  - " << materia.nombre << ": "
+             << fixed << setprecision(2) << materia.calificacion << "\n";
     }
-    cout << "Promedio: " << calcularPromedio() << endl;
+    cout << "Promedio general: " << fixed << setprecision(2) << calcularPromedio() << "\n";
 }
+//TERMINA CHAT GPT
+
+void Alumno::mostrarInformacion() const {
+    consultarCalificaciones();
+}
+
