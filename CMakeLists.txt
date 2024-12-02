@@ -8,4 +8,7 @@ add_executable(Equipo2 main.cpp
         Persona.cpp
         Persona.h
         Alumno.cpp
-        Alumno.h)
+        Alumno.h
+        Materia.cpp
+        Materia.h
+)
