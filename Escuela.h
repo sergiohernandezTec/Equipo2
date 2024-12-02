@@ -3,26 +3,30 @@
 //
 #ifndef ESCUELA_H
 #define ESCUELA_H
-#include <string>
+#include<iostream>
 #include <vector>
+#include <algorithm>
+#include <fstream>
+#include "Alumno.h"
+#include "Profesor.h"
+
 using namespace std;
 class Escuela {
 private:
     string nombre;
     string telefono;
-    //vector<alunmo>alumnos;
-    //vector<profesor>profesores;
-    //vector<calificacion>calificaciones;
-    //vector<materia>materias;
+    vector<Alumno> alumnos;
+    vector<Profesor> profesores;
+    vector<Materia>materias;
     double promGeneral;
 
 public:
     Escuela(string _nombre, string _telefono);
-    void inscribirAlumno();
-    double getPromGeneral();
-    void menuAdministrador();
-    void menuProfes();
-    void menuAlumnos();
+    void guardarAlumnos(const vector<Alumnos>& alumnos);
+    void cargarAlumnos(vector<Alumno>& alumnos);
+    void guardarProfesores(const vector<Profesor>& profesores);
+    void cargarProfesores(vector<Profesor>& profesores);
+    void mostrarMenu();
 };
 
 
