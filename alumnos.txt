@@ -1,0 +1,150 @@
+Juan Pérez
+A0001
+Matematicas|85.5
+Fisica|90.0
+Historia|78.0
+#
+Maria Lopez
+A0002
+Quimica|88.0
+Biologia|92.5
+Matematicas|80.0
+#
+Carlos Sanchez
+A0003
+Ingles|75.0
+Arte|85.0
+Musica|90.0
+#
+Laura Gonzalez
+A0004
+Historia|88.0
+Geografia|82.0
+Civismo|80.0
+#
+Luis Hernandez
+A0005
+Matematicas|95.0
+Fisica|89.0
+Quimica|92.0
+#
+Ana Martinez
+A0006
+Biologia|85.0
+Educacion Fisica|90.0
+Salud|88.0
+#
+Pedro Torres
+A0007
+Computacion|92.0
+Matematicas|87.0
+Fisica|85.0
+#
+Lucia Romero
+A0008
+Literatura|90.0
+Historia|85.0
+Arte|88.0
+#
+Miguel Flores
+A0009
+Musica|95.0
+Arte|92.0
+Teatro|90.0
+#
+Elena Morales
+A0010
+Quimica|80.0
+Fisica|85.0
+Biologia|88.0
+#
+Jose Cruz
+A0011
+Matematicas|70.0
+Ingles|75.0
+Computacion|80.0
+#
+Sofia Ortiz
+A0012
+Geografia|88.0
+Historia|90.0
+Civismo|85.0
+#
+Diego Ramos
+A0013
+Educacion Fisica|95.0
+Salud|90.0
+Biologia|85.0
+#
+Isabel Vega
+A0014
+Literatura|85.0
+Ingles|90.0
+Arte|88.0
+#
+Fernando Aguilar
+A0015
+Computacion|92.0
+Matematicas|85.0
+Fisica|80.0
+#
+Gabriela Medina
+A0016
+Quimica|88.0
+Biologia|90.0
+Matematicas|85.0
+#
+Ricardo Castillo
+A0017
+Historia|80.0
+Geografia|85.0
+Civismo|82.0
+#
+Valeria Delgado
+A0018
+Musica|95.0
+Arte|90.0
+Teatro|88.0
+#
+Alejandro Mendoza
+A0019
+Ingles|85.0
+Computacion|90.0
+Matematicas|88.0
+#
+Camila Navarro
+A0020
+Biologia|92.0
+Quimica|90.0
+Fisica|88.0
+#
+Daniela Soto
+A0021
+Literatura|90.0
+Historia|85.0
+Arte|88.0
+#
+Jorge Reyes
+A0022
+Matematicas|80.0
+Fisica|82.0
+Computacion|85.0
+#
+Paula Jimenez
+A0023
+Educacion Fisica|90.0
+Salud|88.0
+Biologia|85.0
+#
+Andres Silva
+A0024
+Geografia|85.0
+Historia|88.0
+Civismo|82.0
+#
+Natalia Carrillo
+A0025
+Musica|92.0
+Arte|90.0
+Teatro|88.0
+#
