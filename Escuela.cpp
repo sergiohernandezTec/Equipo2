@@ -13,9 +13,6 @@ void Escuela::contratarProfesor(Profesor p) {
     profesores.push_back(p);
 }
 
-
-
-
 void Escuela::guardarAlumnos(const vector<Alumno>& alumnos) {
     ofstream archivo("alumnos.txt");
     if (!archivo.is_open()) {
@@ -32,8 +29,6 @@ void Escuela::guardarAlumnos(const vector<Alumno>& alumnos) {
     }
     archivo.close();
 }
-
-
 void Escuela::cargarAlumnos(vector<Alumno>& alumnos) {
     ifstream archivo("alumnos.txt");
     if (!archivo.is_open()) {
@@ -55,8 +50,6 @@ void Escuela::cargarAlumnos(vector<Alumno>& alumnos) {
     }
     archivo.close();
 }
-
-
 void Escuela::guardarProfesores(const vector<Profesor>& profesores) {
     ofstream archivo("profesores.txt");
     if (!archivo.is_open()) {

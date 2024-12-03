@@ -8,6 +8,7 @@ int main() {
     Escuela Escuela("Tec de Monterrey", "1234567890");
     int opcion;
     string contrasenia;
+    cout<<"\n Desde el menu de administrador, contratar maestro e inscribir alumno y asignar materia a ambos";
 
     menu1:
     cout<<"\n___________________________________"
@@ -81,14 +82,12 @@ int main() {
                     auto i = find_if(Escuela.alumnos.begin(), Escuela.alumnos.end(), [&matricula](const Alumno& alumno) {
                         return alumno.getMatricula() == matricula;
                     });
-
                     if (i != Escuela.alumnos.end()) {
                         i->agregarMateria(materia);
                         cout << "Materia asignada correctamente.\n";
                     } else {
                         cout << "Alumno no encontrado.\n";
                     }
-
                 }
                 else if (opcionAdmin==4) {
                     string matricula, materia;
