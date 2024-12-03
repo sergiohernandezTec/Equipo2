@@ -6,6 +6,16 @@ Escuela:: Escuela(string _nombre, string _telefono){
   nombre = _nombre;
   telefono = _telefono;
 }
+void Escuela::inscribirAlumno(Alumno a) {
+    alumnos.push_back(a);
+}
+void Escuela::contratarProfesor(Profesor p) {
+    profesores.push_back(p);
+}
+
+
+
+
 void Escuela::guardarAlumnos(const vector<Alumno>& alumnos) {
     ofstream archivo("alumnos.txt");
     if (!archivo.is_open()) {
@@ -83,14 +93,12 @@ void Escuela::cargarProfesores(vector<Profesor>& profesores) {
 }
 //TERMINA CHAT GPT
 void Escuela::mostrarMenu() {
-    cout << "=== Menu Principal ===\n";
-    cout << "1. Agregar Alumno\n";
-    cout << "2. Agregar Profesor\n";
-    cout << "3. Consultar calificaciones de un alumno\n";
-    cout << "4. Asignar materia a un alumno\n";
-    cout << "5. Asignar calificacion a un alumno\n";
-    cout << "6. Consultar materias de un profesor\n";
-    cout << "7. Asignar materia a un profesor\n";
-    cout << "8. Salir\n";
-    cout << "Ingrese una opcion: ";
+    cout<<"\n___________________________________"
+                      "\n\tOpciones administrador"
+                      "\n1. Inscribir alumno."
+                      "\n2. Contratar profesor"
+                      "\n3. Asignar materia a un alumno"
+                      "\n4. Asignar materia a un profesor"
+                      "\n5. Consultar materias de un profesor"
+                      "\n___________________________________\n";
 }

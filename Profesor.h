@@ -20,7 +20,6 @@ public:
     void asignarMateria(const string& nombreMateria);
     const vector<string>& getMaterias() const;
     bool imparteMateria(const string& nombreMateria) const;
-
     void mostrarMaterias() const;
     void mostrarInformacion() const override;
 };

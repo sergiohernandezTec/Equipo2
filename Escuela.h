@@ -15,13 +15,16 @@ class Escuela {
 private:
     string nombre;
     string telefono;
-    vector<Alumno> alumnos;
-    vector<Profesor> profesores;
-    vector<Materia>materias;
+
     double promGeneral;
 
 public:
+    vector<Alumno> alumnos;
+    vector<Profesor> profesores;
+    vector<Materia>materias;
     Escuela(string _nombre, string _telefono);
+    void inscribirAlumno(Alumno a);
+    void contratarProfesor(Profesor p);
     void guardarAlumnos(const vector<Alumno>& alumnos);
     void cargarAlumnos(vector<Alumno>& alumnos);
     void guardarProfesores(const vector<Profesor>& profesores);

@@ -31,5 +31,5 @@ void Profesor::mostrarMaterias() const {
 }
 
 void Profesor::mostrarInformacion() const {
-    mostrarMaterias();
+    cout<<nombre<<"  "<<matricula<<endl;
 }
