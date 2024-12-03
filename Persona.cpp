@@ -8,36 +8,18 @@
 
 using namespace std;
 
-Profesor::Profesor(const string& nombre, const string& matricula)
-    : Persona(nombre, matricula) {}
+#include "Persona.h"
+Persona::Persona(const string& nombre, const string& matricula)
+    : nombre(nombre), matricula(matricula) {}
 
-void Profesor::asignarMateria(const string& nombreMateria) {
-    materias.push_back(nombreMateria);
+string Persona::getNombre() const {
+    return nombre;
 }
 
-const vector<string>& Profesor::getMaterias() const {
-    return materias;
+string Persona::getMatricula() const {
+    return matricula;
 }
 
-bool Profesor::imparteMateria(const string& nombreMateria) const {
-    for (const auto& materia : materias) {
-        if (materia == nombreMateria) {
-            return true;
-        }
-    }
-    return false;
-}
-
-void Profesor::mostrarMaterias() const {
-    cout << "Materias que imparte " << nombre << ":\n";
-    for (const auto& materia : materias) {
-        cout << "  - " << materia << "\n";
-    }
-}
-
-void Profesor::mostrarInformacion() const {
-    mostrarMaterias();
-}
 
 
 

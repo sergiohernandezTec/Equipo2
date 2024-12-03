@@ -3,6 +3,8 @@
 #include <algorithm>
 using namespace std;
 
+
+
 int main() {
     Escuela Escuela("Tec de Monterrey", "1234567890");
     int opcion;

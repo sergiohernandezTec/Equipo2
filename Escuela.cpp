@@ -2,6 +2,10 @@
 // Created by islas on 30/11/2024.
 //
 #include "Escuela.h"
+Escuela:: Escuela(string _nombre, string _telefono){
+  nombre = _nombre;
+  telefono = _telefono;
+}
 void Escuela::guardarAlumnos(const vector<Alumno>& alumnos) {
     ofstream archivo("alumnos.txt");
     if (!archivo.is_open()) {

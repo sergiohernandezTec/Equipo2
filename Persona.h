@@ -18,9 +18,7 @@ public:
 
     string getNombre() const;
     string getMatricula() const;
-
     virtual void mostrarInformacion() const = 0; //CHAT GPT
-
     virtual ~Persona() = default; //CHAT GPT
 };
 

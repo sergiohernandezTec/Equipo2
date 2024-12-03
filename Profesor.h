@@ -4,7 +4,7 @@
 
 #ifndef PROFESOR_H
 #define PROFESOR_H
-
+#include <iostream>
 #include "Persona.h"
 #include <vector>
 
