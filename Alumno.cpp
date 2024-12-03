@@ -53,4 +53,3 @@ void Alumno::consultarCalificaciones() const {
 void Alumno::mostrarInformacion() const {
     consultarCalificaciones();
 }
-
